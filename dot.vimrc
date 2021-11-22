@@ -1,5 +1,6 @@
 set ts=2 sw=2 ruler
 set number relativenumber
+
 " This file represents the minimal .vimrc needed to work with govim.
 "
 " We also include a number of suggested settings that we think the majority of
@@ -28,7 +29,8 @@ set ttymouse=sgr
 " reported by gopls after a period of inactivity, the time period being
 " defined by updatetime (help updatetime). Here we suggest a short updatetime
 " time in order that govim/Vim are more responsive/IDE-like
-set updatetime=500
+" set updatetime=500
+set updatetime=250
 
 " Suggestion: To make govim/Vim more responsive/IDE-like, we suggest a short
 " balloondelay
@@ -67,3 +69,5 @@ if has("patch-8.1.1904")
   set completepopup=align:menu,border:off,highlight:Pmenu
 endif
 
+packadd govim
+call govim#config#Set("Gofumpt", 1)
